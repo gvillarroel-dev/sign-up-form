@@ -9,8 +9,6 @@
 	--font-base: Roboto, system-ui, -apple-system, BlinkMacSystemFont,
 		"Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
 		"Helvetica Neue", sans-serif;
-	--font-serif: "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
-		"Helvetica Neue", sans-serif;
 }
 
 * {
@@ -23,16 +21,15 @@
 body {
 	width: 100dvw;
 	min-height: 100dvh;
-
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-start;
+	gap: 1rem;
 }
 
 .signup {
 	width: 100%;
-	flex-grow: 1;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -50,6 +47,7 @@ body {
 .signup_image-container {
 	width: 100%;
 	height: 100%;
+	min-height: 600px;
 	overflow: hidden;
 	border-radius: 20px;
 	position: relative;
@@ -128,11 +126,11 @@ body {
 }
 
 .signup__title {
-	font-size: clamp(1.6rem, 2vw, 1.9rem);
+	font-size: clamp(1.6rem, 2vw, 1.8rem);
 }
 
 .signup__subtitle {
-	font-size: clamp(0.86rem, 2vw, 1rem);
+	font-size: clamp(0.86rem, 2vw, 0.9rem);
 }
 
 .signup__social-buttons {
@@ -142,7 +140,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	gap: 9px;
-	margin-bottom: 1rem;
+	margin-bottom: 0.3rem;
 }
 
 .signup__social-buttons a {
@@ -221,13 +219,11 @@ body {
 	justify-content: center;
 	align-content: flex-start;
 	gap: 9px;
-	margin-bottom: 1rem;
 }
 
 .signup__name-fields {
 	display: flex;
 	flex-direction: column;
-	gap: 1rem;
 	width: 100%;
 }
 
@@ -240,7 +236,7 @@ body {
 
 .form-field__input {
 	width: 100%;
-	padding: 1rem 0.7rem;
+	padding: 0.8rem 0.7rem;
 	border-radius: 9px;
 	font-size: 1rem;
 	font-weight: lighter;
@@ -252,7 +248,7 @@ body {
 
 .form-field__input::placeholder {
 	color: var(--grey-text);
-	font-size: clamp(1rem, 0.2rem + 2vw, 1.2rem);
+	font-size: clamp(1rem, 0.2rem + 2vw, 1.1rem);
 }
 
 .form-field__input:focus {
@@ -291,6 +287,7 @@ body {
 	background: var(--button-color);
 	color: var(--light-text-color);
 	font-weight: bolder;
+	font-size: clamp(1rem, 2vw, 1.1rem);
 
 	cursor: pointer;
 	transition: opacity 0.3s ease;
@@ -301,14 +298,14 @@ body {
 }
 
 .signup__footer-text,
-.signup__terms {
-	font-size: clamp(1rem, 0.2rem + 2vw, 1.1rem);
-	margin-bottom: 1rem;
+.signup__terms,
+.signup__link {
+	font-size: clamp(0.7rem, 0.2rem + 2vw, 1rem);
 	text-align: center;
 }
 
 .signup__terms {
-	margin-top: 1rem;
+	margin: 0.5rem auto 1rem;
 	color: var(--grey-text);
 }
 
@@ -329,6 +326,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-top: 0.7rem;
 }
 
 .footer__text {
@@ -348,7 +346,7 @@ body {
 	opacity: 0.7;
 }
 
-/* ========== Media Queries Config ========== */
+/* ============= Media Queries Config  ============= */
 
 /* Tablets (Medium screens) */
 @media (min-width: 768px) {
@@ -364,32 +362,43 @@ body {
 
 /* Desktop (Large screens) */
 @media (min-width: 1024px) {
+	body {
+		gap: auto;
+		justify-content: space-between;
+	}
+
 	.signup {
 		max-width: 1200px;
-		height: 90dvh;
+		min-height: 690px;
 		padding: 9px;
+
 		flex-direction: row-reverse;
 		justify-content: center;
+		align-items: center;
 		gap: 1.6rem;
-		margin: auto;
+		flex-grow: 1;
 	}
 
 	.signup__image-section {
-		width: 55%;
-		height: 96%;
-		max-height: 900px;
+		width: 50%;
+		min-height: 680px;
+		max-height: 800px;
 		max-width: none;
 		margin: 0;
 	}
 
 	.signup__form-section {
 		width: 45%;
-		height: 98%;
-		max-height: 900px;
+		min-height: 670px;
 		max-width: none;
+		max-height: 800px;
 		margin: 0;
-		padding: 1.2rem;
 		justify-content: space-evenly;
+		padding: 1rem 0;
+	}
+
+	.signup__divider {
+		margin-bottom: 0.4rem;
 	}
 
 	.signup__form {
@@ -419,7 +428,7 @@ body {
 	}
 
 	.signup__terms {
-		margin: 1rem 0;
+		margin: 0.5rem 0 0 0;
 	}
 
 	.signup__quote {
@@ -431,6 +440,7 @@ body {
 
 	.footer {
 		margin-top: 0;
+		padding: 0.5rem;
 	}
 }
 
@@ -447,7 +457,7 @@ body {
 
 	.signup__form-section {
 		width: 42%;
-		padding: 2rem;
+		padding: 1rem 0;
 	}
 
 	.form-field {

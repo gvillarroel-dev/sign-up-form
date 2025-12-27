@@ -11,6 +11,7 @@
 		<main class="signup" id="main-content">
 			<section class="signup__image-section">
 				<div class="signup_image-container">
+                    <img src="./img/odin-logo.png" alt="" class="signup__image-logo">
 					<img src="./img/bg.jpg" alt="Full moon with clouds in night sky" class="signup__image" />
 					<p class="signup__image-credits">Photo by
 					    <a href="https://unsplash.com/es/@adinc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" class="signup__image-link" target="_blank" rel="noopener noreferrer">Altınay Dinç</a>
@@ -77,7 +78,7 @@
                     </div>
 
                     <div class="form-field">
-                        <label for="user_password">
+                        <label for="user_password" class="form-field__label">
                             Password
                             <abbr title="required">*</abbr>
                         </label>
@@ -88,17 +89,18 @@
                     </div>
 
                     <div class="form-field">
-                        <label for="confirm_password">
+                        <label for="confirm_password" class="form-field__label">
                             Confirm Password
                             <abbr title="required">*</abbr>
                         </label>
                         <input type="password" name="confirm_password" id="confirm_password" placeholder="Repeat your password" class="form-field__input" required autocomplete="new-password" minlength="8">
                     </div>
 
+                    <p class="signup__terms">By creating an account, you agree to our <a href="#" class="signup__link">terms of use</a>.</p>
+
                     <button type="submit" class="signup__submit-button">Sign Up</button>
 
                     <p class="signup__footer-text">Already have an account? <a href="#" class="signup__link">Log In</a></p>
-                    <p class="signup__terms">By creating an account, you agree to our <a href="#" class="signup__link">terms of use</a>.</p>
                 </form>
             </section>
 		</main>
